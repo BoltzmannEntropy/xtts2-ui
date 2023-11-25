@@ -8,7 +8,7 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
 For information on preventing model re-downloading, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
 
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/ui.png?raw=true" width="30%"></a>  
+  <img src="https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/ui.png?raw=true" width="100%"></a>  
 </h1>
 
 Download paths:
