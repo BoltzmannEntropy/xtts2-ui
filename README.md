@@ -54,11 +54,12 @@ On initial use, you will need to agree to the terms:
 ## Examples:
 
 English:
-<audio controls>
-  <source src="<audio controls>
-  <source src="https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/outputs/Rogger-12bb0bce.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/outputs/Rogger-12bb0bce.wav
+
+Russian:
+
+Arabic:
+
 
 
 ## Credits
