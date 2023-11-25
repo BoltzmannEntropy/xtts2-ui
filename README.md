@@ -28,13 +28,12 @@ yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
 
 ## Setup
 
-1. Create a Python environment using conda as per the provided instructions.
-2. Activate the newly created environment: `conda activate llvc`.
+1. Create a Python environment using conda as per the provided instructions here: https://github.com/kanttouchthis/text_generation_webui_xtts
+2. Activate the newly created environment: `conda activate`.
 3. Install `torch` and `torchaudio` from [PyTorch Official Site](https://pytorch.org/get-started/locally/).
 4. Models will be downloaded automatically upon first use.
 
 ## Inference
-
 To run the application:
 
 ```
