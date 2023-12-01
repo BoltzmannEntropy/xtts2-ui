@@ -1,44 +1,91 @@
 # XTTS-2-UI: A User Interface for XTTS-2 Text-Based Voice Cloning
 
-This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
+This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. Super quick to set up and use, and works nicely. [Examples](#examples)
+
+It is a **gradio-based** UI, with features such as in-built voice recording.
 
 ## Model 
 The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more details, refer to [Hugging Face - XTTS-v2](https://huggingface.co/coqui/XTTS-v2) and its specific version [XTTS-v2 Version 2.0.2](https://huggingface.co/coqui/XTTS-v2/tree/v2.0.2).
 
-For information on preventing model re-downloading, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
-
 <h1 align="center">    
-  <img src="https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/ui.png?raw=true" width="100%"></a>  
+  <img src="demo_info/ui.png" width="100%"></a>  
 </h1>
+
+## Table of Contents
+
+- [XTTS-2-UI: A User Interface for XTTS-2 Text-Based Voice Cloning](#xtts-2-ui-a-user-interface-for-xtts-2-text-based-voice-cloning)
+  - [Model](#model)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Inference](#inference)
+  - [Target Voices Dataset](#target-voices-dataset)
+  - [Examples:](#examples)
+  - [Credits](#credits)
+
+## Setup
+
+To set up this project, follow these steps:
+
+1. **Create a Virtual Environment:**
+   - Run the following command to create a Python virtual environment:
+     ```bash
+     python -m venv venv
+     ```
+   - Activate the virtual environment:
+     - Windows:
+       ```bash
+       venv\Scripts\activate
+       ```
+     - Linux/Mac:
+       ```bash
+       source venv/bin/activate
+       ```
+
+2. **Install Required Packages:**
+   - Install TTS and gradio packages:
+     ```bash
+     pip install TTS==0.20.2 gradio
+     ```
+   - Upgrade the TTS package to the latest version:
+     ```bash
+     pip install --upgrade TTS
+     ```
+
+3. **Install PyTorch:**
+   
+   - If you have an Nvidia CUDA-Enabled GPU, choose the appropriate PyTorch installation command:
+     - Before installing PyTorch, check your CUDA version by running:
+       ```bash
+       nvcc --version
+       ```
+     - For CUDA 12.1:
+       ```bash
+       pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+       ```
+     - For CUDA 11.8:
+       ```bash
+       pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+       ```
+   - If you don't have a CUDA-enabled GPU,:
+     Follow the instructions on the [PyTorch website](https://pytorch.org/get-started/locally/) to install the appropriate version of PyTorch for your system.
+     
+
+After completing these steps, your setup should be complete and you can start using the project.
+
+Models will be downloaded automatically upon first use.
 
 Download paths:
 - MacOS: `/Users/USR/Library/Application Support/tts/tts_models--multilingual--multi-dataset--xtts_v2`
 - Windows: `C:\Users\ YOUR-USER-ACCOUNT \AppData\Local\tts\tts_models--multilingual--multi-dataset--xtts_v2`
 - Linux: `/home/${USER}/.local/share/tts/tts_models--multilingual--multi-dataset--xtts_v2`
 
-## Target Voices Dataset
-The dataset consists of a single folder named `targets`, pre-populated with several voices for testing purposes.
 
-To add more voices, create a 24KHz WAV file of approximately 10 seconds and place it under the `targets` folder. 
-You can use yt-dlp to download a voice from YouTube for cloning:
-```
-yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
-```
-
-
-## Setup
-
-1. Create a Python environment using conda as per the provided instructions here: https://github.com/kanttouchthis/text_generation_webui_xtts
-2. Activate the newly created environment: `conda activate`.
-3. Install `torch` and `torchaudio` from [PyTorch Official Site](https://pytorch.org/get-started/locally/).
-4. Models will be downloaded automatically upon first use.
 
 ## Inference
 To run the application:
 
 ```
-pip install TTS==0.20.* streamlit
-streamlit run app.py
+python app.py
 ```
 On initial use, you will need to agree to the terms:
 
@@ -51,19 +98,27 @@ On initial use, you will need to agree to the terms:
  | | >
  ```
 
+For information on preventing model re-downloading each run, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
+
+## Target Voices Dataset
+The dataset consists of a single folder named `targets`, pre-populated with several voices for testing purposes.
+
+To add more voices (if you don't want to go through the GUI), create a 24KHz WAV file of approximately 10 seconds and place it under the `targets` folder. 
+You can use yt-dlp to download a voice from YouTube for cloning:
+```
+yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
+```
+
+
 ## Examples:
 
 English:
-https://github.com/BoltzmannEntropy/xtts2-ui/blob/main/outputs/Rogger-12bb0bce.wav
+[Rogger Sample Audio](demo_info/Rogger_sample.wav)
 
-Russian:
+Russian: Not working right now.
 
-Arabic:
-
-
+Arabic: Not working right now.
 
 ## Credits
-Many of the modules written in `minimal_rvc/` are based on the following repositories:
-- https://github.com/ddPn08/rvc-webui
-- https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI
-- https://github.com/teftef6220/Voice_Separation_and_Selection
+1. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
+2. Forked from https://github.com/BoltzmannEntropy/xtts2-ui. This source version uses a streamlit-based GUI instead of gradio, and does not currently include the ability to record audio.
