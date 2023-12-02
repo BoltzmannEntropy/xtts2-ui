@@ -115,7 +115,7 @@ On initial use, you will need to agree to the terms:
  | | >
  ```
 
-For information on preventing model re-downloading each run, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
+If your model is re-downloading each run, please consult [Issue 4723 on GitHub](https://github.com/oobabooga/text-generation-webui/issues/4723#issuecomment-1826120220).
 
 ## Target Voices Dataset
 The dataset consists of a single folder named `targets`, pre-populated with several voices for testing purposes.
