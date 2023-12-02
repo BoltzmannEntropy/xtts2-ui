@@ -1,6 +1,6 @@
 # XTTS-2-UI: A User Interface for XTTS-2 Text-Based Voice Cloning
 
-This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. Setup is simple, the ui is easy to use, and xtts2 works pretty decently. [Examples](#examples)
+This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. XTTS-2-UI is simple to setup and use. [Example Results](#examples)
 
 It is a **gradio-based** UI, with features such as in-built voice recording.
 
