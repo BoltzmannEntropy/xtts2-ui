@@ -26,7 +26,15 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
 
 To set up this project, follow these steps:
 
-1. **Create a Virtual Environment:**
+1. **Clone the Repository**
+
+    - Clone the repository to your local machine via a terminal.
+      ```bash
+      git clone https://github.com/pbanuru/xtts2-ui.git
+      cd xtts2-ui
+      ```
+
+2. **Create a Virtual Environment:**
    - Run the following command to create a Python virtual environment:
      ```bash
      python -m venv venv
@@ -41,7 +49,7 @@ To set up this project, follow these steps:
        source venv/bin/activate
        ```
 
-2. **Install Required Packages:**
+3. **Install Required Packages:**
    - Install TTS and gradio packages:
      ```bash
      pip install TTS==0.20.2 gradio
@@ -51,7 +59,7 @@ To set up this project, follow these steps:
      pip install --upgrade TTS
      ```
 
-3. **Install PyTorch:**
+4. **Install PyTorch:**
    
    - If you have an Nvidia CUDA-Enabled GPU, choose the appropriate PyTorch installation command:
      - Before installing PyTorch, check your CUDA version by running:
