@@ -59,7 +59,6 @@ def gen_voice(string, spk, speed, english):
     return output_file
 
 def update_speakers():
-    print("Updating speakers")
     speakers = {p.stem: str(p) for p in list(Path('targets').glob("*.wav"))}
     return list(speakers.keys())
 
