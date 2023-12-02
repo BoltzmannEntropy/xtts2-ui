@@ -1,1 +1,3 @@
-TTS==0.20.*
+gradio==4.7.1
+TTS==0.21.*
+soundfile==0.12.1
