@@ -137,5 +137,4 @@ Russian: Not working right now.
 Arabic: Not working right now.
 
 ## Credits
-1. Forked from https://github.com/BoltzmannEntropy/xtts2-ui. This original version uses a streamlit-based GUI instead of gradio, and does not currently include the ability to record audio.
-2. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
+1. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
