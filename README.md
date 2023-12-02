@@ -24,11 +24,11 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
 
 ## Setup
 
-To set up this project, follow these steps:
+To set up this project, follow these steps in a terminal:
 
 1. **Clone the Repository**
 
-    - Clone the repository to your local machine via a terminal.
+    - Clone the repository to your local machine.
       ```bash
       git clone https://github.com/pbanuru/xtts2-ui.git
       cd xtts2-ui
@@ -42,24 +42,21 @@ To set up this project, follow these steps:
    - Activate the virtual environment:
      - Windows:
        ```bash
+       # cmd prompt
        venv\Scripts\activate
+       ```
+       or
+       
+       ```bash
+       # git bash
+       source venv/Scripts/activate
        ```
      - Linux/Mac:
        ```bash
        source venv/bin/activate
        ```
 
-3. **Install Required Packages:**
-   - Install TTS and gradio packages:
-     ```bash
-     pip install TTS==0.20.2 gradio
-     ```
-   - Upgrade the TTS package to the latest version:
-     ```bash
-     pip install --upgrade TTS
-     ```
-
-4. **Install PyTorch:**
+3. **Install PyTorch:**
    
    - If you have an Nvidia CUDA-Enabled GPU, choose the appropriate PyTorch installation command:
      - Before installing PyTorch, check your CUDA version by running:
@@ -76,6 +73,18 @@ To set up this project, follow these steps:
        ```
    - If you don't have a CUDA-enabled GPU,:
      Follow the instructions on the [PyTorch website](https://pytorch.org/get-started/locally/) to install the appropriate version of PyTorch for your system.
+
+4. **Install Other Required Packages:**
+   - Install direct dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Upgrade the TTS package to the latest version:
+     ```bash
+     pip install --upgrade TTS
+     ```
+
+
      
 
 After completing these steps, your setup should be complete and you can start using the project.
@@ -128,5 +137,5 @@ Russian: Not working right now.
 Arabic: Not working right now.
 
 ## Credits
-1. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
-2. Forked from https://github.com/BoltzmannEntropy/xtts2-ui. This source version uses a streamlit-based GUI instead of gradio, and does not currently include the ability to record audio.
+1. Forked from https://github.com/BoltzmannEntropy/xtts2-ui. This original version uses a streamlit-based GUI instead of gradio, and does not currently include the ability to record audio.
+2. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
