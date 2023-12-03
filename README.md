@@ -138,7 +138,7 @@ yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
 | Arabic   | [▶️](demo_info/Rogger_sample_aa.wav) |
 
 ## Language Support
-Arabic, Chinese, Czech, Dutch, English, French, German, Hungarian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Turkish
+Arabic, Chinese, Czech, Dutch, English, French, German, Hungarian, Italian, Japanese[ (see setup)](#notes), Korean, Polish, Portuguese, Russian, Spanish, Turkish
 
 ## Notes
 If you would like to select **Japanese** as the target language, you must install a dictionary.
