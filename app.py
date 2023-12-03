@@ -94,7 +94,7 @@ with gr.Blocks() as app:
         with gr.Column():
             text_input = gr.Textbox(lines=2, label="Speechify this Text",value="Even in the darkest nights, a single spark of hope can ignite the fire of determination within us, guiding us towards a future we dare to dream.")
             speed_slider = gr.Slider(label='Speed', minimum=0.1, maximum=1.99, value=0.8, step=0.01)
-            language_dropdown = gr.Dropdown(list(languages.keys()), label="Language of Text (Only English Working)", value="English")
+            language_dropdown = gr.Dropdown(list(languages.keys()), label="Language/Accent", value="English")
 
             gr.Markdown("### Speaker Selection and Voice Cloning")
             

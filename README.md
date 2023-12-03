@@ -1,8 +1,8 @@
 # XTTS-2-UI: A User Interface for XTTS-2 Text-Based Voice Cloning
 
-This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. XTTS-2-UI is simple to setup and use. [Example Results](#examples)
+This repository contains the essential code for cloning any voice using just text and a 10-second audio sample of the target voice. XTTS-2-UI is simple to setup and use. [Example Results 🔊](#examples)
 
-It is a **gradio-based** UI, with features such as in-built voice recording.
+Works in [16 languages](#language-support) and has in-built voice recording/uploading.
 
 ## Model 
 The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more details, refer to [Hugging Face - XTTS-v2](https://huggingface.co/coqui/XTTS-v2) and its specific version [XTTS-v2 Version 2.0.2](https://huggingface.co/coqui/XTTS-v2/tree/v2.0.2).
@@ -19,7 +19,9 @@ The model used is `tts_models/multilingual/multi-dataset/xtts_v2`. For more deta
   - [Setup](#setup)
   - [Inference](#inference)
   - [Target Voices Dataset](#target-voices-dataset)
-  - [Examples:](#examples)
+  - [Sample Audio Examples:](#sample-audio-examples)
+  - [Language Support](#language-support)
+  - [Notes](#notes)
   - [Credits](#credits)
 
 ## Setup
@@ -127,14 +129,31 @@ yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
 ```
 
 
-## Examples:
+## Sample Audio Examples:
 
-English:
-[Rogger Sample Audio](demo_info/Rogger_sample.wav)
+| Language | Audio Sample Link |
+|----------|-------------------|
+| English  | [▶️](demo_info/Rogger_sample_en.wav) |
+| Russian  | [▶️](demo_info/Rogger_sample_ru.wav) |
+| Arabic   | [▶️](demo_info/Rogger_sample_aa.wav) |
 
-Russian: Not working right now.
+## Language Support
+Arabic, Chinese, Czech, Dutch, English, French, German, Hungarian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Turkish
 
-Arabic: Not working right now.
+## Notes
+If you would like to select **Japanese** as the target language, you must install a dictionary.
+```bash
+# Lite version
+pip install fugashi[unidic-lite]
+```
+or for more serious processing:
+```bash
+# Full version
+pip install fugashi[unidic]
+python -m unidic download
+```
+More details [here](https://github.com/polm/fugashi#installing-a-dictionary).
+
 
 ## Credits
 1. Heavily based on https://github.com/kanttouchthis/text_generation_webui_xtts/ 
