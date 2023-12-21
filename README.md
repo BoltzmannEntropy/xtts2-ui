@@ -106,6 +106,8 @@ To run the application:
 
 ```
 python app.py
+OR
+streamlit run app2.py 
 ```
 On initial use, you will need to agree to the terms:
 
