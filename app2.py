@@ -13,6 +13,8 @@ import gradio as gr
 import uuid
 import torch 
 import librosa
+import streamlit as st
+from audio_recorder_streamlit import audio_recorder
 from scipy.io.wavfile import write
 
 params = {
@@ -61,7 +63,7 @@ def random_sentence():
     with open(Path("harvard_sentences.txt")) as f:
         return random.choice(list(f))
 
-st.title("TTS based Voice Clonning in 16 Languages.")
+st.title("TTS based Voice Cloning in 16 Languages.")
 # st.image('logo.png', width=150)
 
 st.header('Text to speech generation')
@@ -95,6 +97,11 @@ with st.sidebar:
     text = st.text_area('Enter text to convert to audio format',
     value="Hello")
     speed = st.slider('Speed', 0.1, 1.99, 0.8, 0.01)
+    
+st.caption ("Optional Microphone Recording. Download and rename your recording before using.")
+audio_bytes = audio_recorder()
+if audio_bytes:
+    st.audio(audio_bytes, format="audio/wav")  
 
     def gen_voice(string,spk):
         string = html.unescape(string)
