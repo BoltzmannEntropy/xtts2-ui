@@ -2,3 +2,4 @@ gradio==4.7.1
 TTS==0.21.*
 soundfile==0.12.1
 streamlit
+audio-recorder-streamlit
