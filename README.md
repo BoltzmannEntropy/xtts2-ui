@@ -109,6 +109,10 @@ python app.py
 OR
 streamlit run app2.py 
 ```
+Or, You can also run from the terminal itself, by providing sample input texts on texts.json and generate multiple audios with multiple speakers, (you may need to adjust on appTerminal.py)
+```
+python appTerminal.py
+```
 On initial use, you will need to agree to the terms:
 
 ```
